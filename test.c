@@ -300,3 +300,4 @@ int main() {
 	printf("%.4lf(sec)\n", cost);
 	system("pause");
 }
+
