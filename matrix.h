@@ -4,7 +4,7 @@
 *     Library/Module Name :              MatrixComputation
 *     Author :                           Marc Pony(marc_pony@163.com)
 *     Create Date :                      2021/6/28
-*     Abstract Description :             ¾ØÕóÔËËã¿âÍ·ÎÄ¼ş
+*     Abstract Description :             çŸ©é˜µè¿ç®—åº“å¤´æ–‡ä»¶
 *******************************************************************************/
 
 #ifndef  __MATRIX_H__
@@ -26,6 +26,7 @@
 *******************************************************************************/
 
 
+
 /*******************************************************************************
 * (4)Struct(Data Types) Define Section
 *******************************************************************************/
@@ -39,11 +40,11 @@ void print_matrix(MATRIX* a, STRING string);
 
 /**********************************************************************************************
 Function: creat_matrix
-Description: ´´½¨¾ØÕó
-Input: ¾ØÕóĞĞÊırows£¬ÁĞÊıcolumns
-Output: ´íÎóºÅÖ¸ÕëerrorID£¬Õ»Ö¸ÕëS
-Input_Output: ÎŞ
-Return: ¾ØÕóÖ¸Õë
+Description: åˆ›å»ºçŸ©é˜µ
+Input: çŸ©é˜µè¡Œæ•°rowsï¼Œåˆ—æ•°columns
+Output: é”™è¯¯å·æŒ‡é’ˆerrorIDï¼Œæ ˆæŒ‡é’ˆS
+Input_Output: æ— 
+Return: çŸ©é˜µæŒ‡é’ˆ
 Author: Marc Pony(marc_pony@163.com)
 ***********************************************************************************************/
 MATRIX* creat_matrix(_IN INTEGER rows, _IN INTEGER columns, _OUT ERROR_ID* errorID, _OUT STACKS* S);
@@ -51,11 +52,11 @@ MATRIX* creat_matrix(_IN INTEGER rows, _IN INTEGER columns, _OUT ERROR_ID* error
 
 /**********************************************************************************************
 Function: creat_multiple_matrices
-Description: ´´½¨¶à¸ö¾ØÕó
-Input: ¾ØÕóĞĞÊırows£¬ÁĞÊıcolumns£¬¸öÊıcount
-Output: ´íÎóºÅÖ¸ÕëerrorID£¬Õ»Ö¸ÕëS
-Input_Output: ÎŞ
-Return: ¾ØÕóÖ¸Õë
+Description: åˆ›å»ºå¤šä¸ªçŸ©é˜µ
+Input: çŸ©é˜µè¡Œæ•°rowsï¼Œåˆ—æ•°columnsï¼Œä¸ªæ•°count
+Output: é”™è¯¯å·æŒ‡é’ˆerrorIDï¼Œæ ˆæŒ‡é’ˆS
+Input_Output: æ— 
+Return: çŸ©é˜µæŒ‡é’ˆ
 Author: Marc Pony(marc_pony@163.com)
 ***********************************************************************************************/
 MATRIX* creat_multiple_matrices(_IN INTEGER rows, _IN INTEGER columns, _IN INTEGER count, _OUT ERROR_ID* errorID, _OUT STACKS* S);
@@ -63,11 +64,11 @@ MATRIX* creat_multiple_matrices(_IN INTEGER rows, _IN INTEGER columns, _IN INTEG
 
 /**********************************************************************************************
 Function: creat_zero_matrix
-Description: ´´½¨Áã¾ØÕó
-Input: ¾ØÕóĞĞÊırows£¬ÁĞÊıcolumns
-Output: ´íÎóºÅÖ¸ÕëerrorID£¬Õ»Ö¸ÕëS
-Input_Output: ÎŞ
-Return: ¾ØÕóÖ¸Õë
+Description: åˆ›å»ºé›¶çŸ©é˜µ
+Input: çŸ©é˜µè¡Œæ•°rowsï¼Œåˆ—æ•°columns
+Output: é”™è¯¯å·æŒ‡é’ˆerrorIDï¼Œæ ˆæŒ‡é’ˆS
+Input_Output: æ— 
+Return: çŸ©é˜µæŒ‡é’ˆ
 Author: Marc Pony(marc_pony@163.com)
 ***********************************************************************************************/
 MATRIX* creat_zero_matrix(_IN INTEGER rows, _IN INTEGER columns, _OUT ERROR_ID* errorID, _OUT STACKS* S);
@@ -75,11 +76,11 @@ MATRIX* creat_zero_matrix(_IN INTEGER rows, _IN INTEGER columns, _OUT ERROR_ID* 
 
 /**********************************************************************************************
 Function: creat_eye_matrix
-Description: ´´½¨µ¥Î»¾ØÕó
-Input: ¾ØÕóĞĞÊırows£¬ÁĞÊıcolumns
-Output: ´íÎóºÅÖ¸ÕëerrorID£¬Õ»Ö¸ÕëS
-Input_Output: ÎŞ
-Return: ¾ØÕóÖ¸Õë
+Description: åˆ›å»ºå•ä½çŸ©é˜µ
+Input: çŸ©é˜µè¡Œæ•°rowsï¼Œåˆ—æ•°columns
+Output: é”™è¯¯å·æŒ‡é’ˆerrorIDï¼Œæ ˆæŒ‡é’ˆS
+Input_Output: æ— 
+Return: çŸ©é˜µæŒ‡é’ˆ
 Author: Marc Pony(marc_pony@163.com)
 ***********************************************************************************************/
 MATRIX* creat_eye_matrix(_IN INTEGER n, _OUT ERROR_ID* errorID, _OUT STACKS* S);
@@ -87,22 +88,22 @@ MATRIX* creat_eye_matrix(_IN INTEGER n, _OUT ERROR_ID* errorID, _OUT STACKS* S);
 
 /**********************************************************************************************
 Function: matrix_add
-Description: ¾ØÕóA + ¾ØÕóB = ¾ØÕóC
-Input: ¾ØÕóA,¾ØÕóB
-Output: ¾ØÕóC
-Input_Output: ÎŞ
-Return: ´íÎóºÅ
+Description: çŸ©é˜µA + çŸ©é˜µB = çŸ©é˜µC
+Input: çŸ©é˜µA,çŸ©é˜µB
+Output: çŸ©é˜µC
+Input_Output: æ— 
+Return: é”™è¯¯å·
 Author: Marc Pony(marc_pony@163.com)
 ***********************************************************************************************/
 ERROR_ID matrix_add(_IN MATRIX* A, _IN MATRIX* B, _OUT MATRIX *C);
 
 /**********************************************************************************************
 Function: matrix_subtraction
-Description: ¾ØÕóA - ¾ØÕóB = ¾ØÕóC
-Input: ¾ØÕóA,¾ØÕóB
-Output: ¾ØÕóC
-Input_Output: ÎŞ
-Return: ´íÎóºÅ
+Description: çŸ©é˜µA - çŸ©é˜µB = çŸ©é˜µC
+Input: çŸ©é˜µA,çŸ©é˜µB
+Output: çŸ©é˜µC
+Input_Output: æ— 
+Return: é”™è¯¯å·
 Author: Marc Pony(marc_pony@163.com)
 ***********************************************************************************************/
 ERROR_ID matrix_subtraction(_IN MATRIX* A, _IN MATRIX* B, _OUT MATRIX* C);
@@ -110,11 +111,11 @@ ERROR_ID matrix_subtraction(_IN MATRIX* A, _IN MATRIX* B, _OUT MATRIX* C);
 
 /**********************************************************************************************
 Function: matrix_multiplication
-Description: ¾ØÕó³Ë·¨C = A * B
-Input: ¾ØÕóA,¾ØÕóB
-Output: ¾ØÕóC
-Input_Output: ÎŞ
-Return: ´íÎóºÅ
+Description: çŸ©é˜µä¹˜æ³•C = A * B
+Input: çŸ©é˜µA,çŸ©é˜µB
+Output: çŸ©é˜µC
+Input_Output: æ— 
+Return: é”™è¯¯å·
 Author: Marc Pony(marc_pony@163.com)
 ***********************************************************************************************/
 ERROR_ID matrix_multiplication(_IN MATRIX* A, _IN MATRIX* B, _OUT MATRIX* C);
@@ -122,11 +123,11 @@ ERROR_ID matrix_multiplication(_IN MATRIX* A, _IN MATRIX* B, _OUT MATRIX* C);
 
 /**********************************************************************************************
 Function: matrix_inverse
-Description: ¾ØÕóÇóÄæ
-Input: ¾ØÕóA
-Output: ¾ØÕóAµÄÄæ¾ØÕó
-Input_Output: ÎŞ
-Return: ´íÎóºÅ
+Description: çŸ©é˜µæ±‚é€†
+Input: çŸ©é˜µA
+Output: çŸ©é˜µAçš„é€†çŸ©é˜µ
+Input_Output: æ— 
+Return: é”™è¯¯å·
 Author: Marc Pony(marc_pony@163.com)
 ***********************************************************************************************/
 ERROR_ID matrix_inverse(_IN MATRIX* A, _OUT MATRIX* invA);
@@ -134,11 +135,11 @@ ERROR_ID matrix_inverse(_IN MATRIX* A, _OUT MATRIX* invA);
 
 /**********************************************************************************************
 Function: matrix_transpose
-Description: ¾ØÕó×ªÖÃ
-Input: ¾ØÕóA
-Output: ¾ØÕóAµÄ×ªÖÃ
-Input_Output: ÎŞ
-Return: ´íÎóºÅ
+Description: çŸ©é˜µè½¬ç½®
+Input: çŸ©é˜µA
+Output: çŸ©é˜µAçš„è½¬ç½®
+Input_Output: æ— 
+Return: é”™è¯¯å·
 Author: Marc Pony(marc_pony@163.com)
 ***********************************************************************************************/
 ERROR_ID matrix_transpose(_IN MATRIX* A, _OUT MATRIX* transposeA);
@@ -146,11 +147,11 @@ ERROR_ID matrix_transpose(_IN MATRIX* A, _OUT MATRIX* transposeA);
 
 /**********************************************************************************************
 Function: matrix_trace
-Description: ¾ØÕóµÄ¼£
-Input: ¾ØÕóA
-Output: ¾ØÕóAµÄ¼£
-Input_Output: ÎŞ
-Return: ´íÎóºÅ
+Description: çŸ©é˜µçš„è¿¹
+Input: çŸ©é˜µA
+Output: çŸ©é˜µAçš„è¿¹
+Input_Output: æ— 
+Return: é”™è¯¯å·
 Author: Marc Pony(marc_pony@163.com)
 ***********************************************************************************************/
 ERROR_ID matrix_trace(_IN MATRIX* A, _OUT REAL* trace);
@@ -158,34 +159,34 @@ ERROR_ID matrix_trace(_IN MATRIX* A, _OUT REAL* trace);
 
 /**********************************************************************************************
 Function: lup_decomposition
-Description: nĞĞnÁĞ¾ØÕóLUP·Ö½âPA = L * U
-Input: nĞĞnÁĞ¾ØÕóA
-Output: nĞĞnÁĞÏÂÈı½Ç¾ØÕóL£¬nĞĞnÁĞÉÏÈı½Ç¾ØÕóU£¬nĞĞnÁĞÖÃ»»¾ØÕóP
-Input_Output: ÎŞ
-Return: ´íÎóºÅ
+Description: nè¡Œnåˆ—çŸ©é˜µLUPåˆ†è§£PA = L * U
+Input: nè¡Œnåˆ—çŸ©é˜µA
+Output: nè¡Œnåˆ—ä¸‹ä¸‰è§’çŸ©é˜µLï¼Œnè¡Œnåˆ—ä¸Šä¸‰è§’çŸ©é˜µUï¼Œnè¡Œnåˆ—ç½®æ¢çŸ©é˜µP
+Input_Output: æ— 
+Return: é”™è¯¯å·
 Author: Marc Pony(marc_pony@163.com)
-²Î¿¼£ºhttps://zhuanlan.zhihu.com/p/84210687
+å‚è€ƒï¼šhttps://zhuanlan.zhihu.com/p/84210687
 ***********************************************************************************************/
 ERROR_ID lup_decomposition(_IN MATRIX* A, _OUT MATRIX* L, _OUT MATRIX* U, _OUT MATRIX* P);
 
 
 /**********************************************************************************************
 Function: solve_matrix_equation_by_lup_decomposition
-Description: LUP·Ö½â½â¾ØÕó·½³ÌAX=B,ÆäÖĞAÎªnĞĞnÁĞ¾ØÕó£¬BÎªnĞĞmÁĞ¾ØÕó£¬XÎªnĞĞmÁĞ´ıÇó¾ØÕó(Ğ´µ½¾ØÕóB)
-Input: nĞĞnÁĞ¾ØÕóA
-Output: ÎŞ
-Input_Output: nĞĞmÁĞ¾ØÕóB(¼´nĞĞmÁĞ´ıÇó¾ØÕóX)
-Return: ´íÎóºÅ
+Description: LUPåˆ†è§£è§£çŸ©é˜µæ–¹ç¨‹AX=B,å…¶ä¸­Aä¸ºnè¡Œnåˆ—çŸ©é˜µï¼ŒBä¸ºnè¡Œmåˆ—çŸ©é˜µï¼ŒXä¸ºnè¡Œmåˆ—å¾…æ±‚çŸ©é˜µ(å†™åˆ°çŸ©é˜µB)
+Input: nè¡Œnåˆ—çŸ©é˜µA
+Output: æ— 
+Input_Output: nè¡Œmåˆ—çŸ©é˜µB(å³nè¡Œmåˆ—å¾…æ±‚çŸ©é˜µX)
+Return: é”™è¯¯å·
 Author: Marc Pony(marc_pony@163.com)
 ***********************************************************************************************/
 ERROR_ID solve_matrix_equation_by_lup_decomposition(_IN MATRIX* A, _IN_OUT MATRIX* B);
 /**********************************************************************************************
 Function: matrix_addex
-Description: lambda * ¾ØÕóA + ¾ØÕóB = ¾ØÕóC
-Input: ,lambda,¾ØÕóA,¾ØÕóB
-Output: ¾ØÕóC
-Input_Output: ÎŞ
-Return: ´íÎóºÅ
+Description: lambda * çŸ©é˜µA + çŸ©é˜µB = çŸ©é˜µC
+Input: ,lambda,çŸ©é˜µA,çŸ©é˜µB
+Output: çŸ©é˜µC
+Input_Output: æ— 
+Return: é”™è¯¯å·
 Author: Dangal
 ***********************************************************************************************/
 ERROR_ID matrix_addex(_IN MATRIX* A, _IN MATRIX* B, _OUT MATRIX *C,REAL lambda);
